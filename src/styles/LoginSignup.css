@@ -1,0 +1,155 @@
+.auth-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.auth-container h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: var(--text);
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  /* background: var(--input-background);
+  color: var(--input-text); */
+}
+
+.auth-container input:focus {
+  border-color: #ef6351;
+  outline: none;
+  box-shadow: 0 0 5px rgba(239, 99, 81, 0.5);
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background: #ef6351;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+  background: #d65246;
+}
+
+.auth-container button:active {
+  background: #bf4a3d;
+}
+
+.toggle-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.toggle-text span {
+  color: #f7a399;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.toggle-text span:hover {
+  color: #ef6351;
+}
+
+.error-text {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Floating User List */
+.floating-user-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+  display: none;
+}
+
+.floating-user-list.show {
+  display: block;
+}
+
+.floating-user-list h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.floating-user-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.floating-user-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.floating-user-list li:last-child {
+  border-bottom: none;
+}
+
+.floating-user-list .delete-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.floating-user-list .delete-btn:hover {
+  color: darkred;
+}
+
+.cancel-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: #ef6351;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background: #d65246;
+}

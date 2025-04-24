@@ -1,0 +1,126 @@
+/* ========== NAVBAR CONTAINER ========== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--primary); /* Warm Muted Peach */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Dark Mode */
+.dark-mode .navbar {
+  background-color: var(--dark-secondary-bg);
+  box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--highlight);
+}
+
+/* ========== LOGO ========== */
+.navbar-logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--navbar-text); /* Soft White */
+  flex-grow: 1;
+  text-align: left;
+}
+
+.dark-mode .navbar-logo {
+  color: #f4e8e8;
+}
+
+/* ========== NAV LINKS ========== */
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding-right: 16px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  color: var(--navbar-text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.nav-link:hover {
+  background-color: var(--navbar-highlight); /* Burnt Sienna */
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  background-color: var(--secondary); /* Sophisticated Dusty Rose */
+  font-weight: bold;
+}
+
+.dark-mode .nav-link {
+  color: #f5f5f5;
+}
+
+.dark-mode .nav-link:hover {
+  background-color: #b35a4e;
+}
+
+.dark-mode .nav-link.active {
+  background-color: #9b4a45;
+}
+
+/* ========== HAMBURGER MENU ========== */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  z-index: 1100;
+}
+
+.dark-mode .hamburger {
+  color: #f5f5f5;
+}
+
+/* ========== RESPONSIVE NAVIGATION ========== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 58px;
+    right: 20px;
+    left: 20px;
+    background: var(--background);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 14px;
+    font-size: 1.1rem;
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dark-mode .nav-links {
+    background: #4a4a4a;
+  }
+}
